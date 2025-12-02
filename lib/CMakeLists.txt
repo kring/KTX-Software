@@ -389,8 +389,6 @@ macro(common_libktx_settings target enable_write library_type)
 
     target_compile_definitions(
         ${target}
-    PUBLIC
-        "$<$<CONFIG:Debug>:_DEBUG;DEBUG>"
     PRIVATE
         LIBKTX
         SUPPORT_SOFTWARE_ETC_UNPACK=$<IF:$<BOOL:${LIBKTX_FEATURE_ETC_UNPACK}>,1,0>
